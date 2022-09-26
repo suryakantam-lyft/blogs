@@ -1,0 +1,9 @@
+func test_existingLyftPassDetails() {
+        self.logInWithExistingUser()
+        self.navigateToPaymentsMenuFlow()
+        self.lyftPassOnPaymentTabPage.tapLyftPass()
+        XCTAssertTrue(self.lyftPassOnPaymentTabPage.didLyftPassNameLoad(),
+                      "Lyft pass details is not displayed")
+        XCTAssertTrue(self.lyftPassOnPaymentTabPage.didLyftPassDetailsLoad(),
+                      "Lyft pass details is not displayed")
+}
